@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"text/template"
+	"html/template"
 	"time"
 )
 

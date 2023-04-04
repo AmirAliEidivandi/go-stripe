@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"strings"
-	"text/template"
+	"html/template"
 )
 
 type templateData struct {
@@ -70,7 +70,7 @@ func (app *application) parseTemplate(partials []string, page, templateToRender 
 	// build partials
 	if len(partials) > 0 {
 		for i, x := range partials {
-			partials[i] = fmt.Sprintf("templates/%s.partials.tmpl", x)
+			partials[i] = fmt.Sprintf("templates/%s.partial.tmpl", x)
 		}
 	}
 
